@@ -3,6 +3,7 @@ using System.Collections;
 
 [AddComponentMenu("MyGame/Enemy")]
 public class Enemy : MonoBehaviour {
+    public int m_point = 10;
     public float m_speed = 1;
     public float m_life = 10;
 
@@ -46,6 +47,7 @@ public class Enemy : MonoBehaviour {
                 m_life -= rocket.m_power;
                 if (m_life <= 0)
                 {
+                    GameManager.Instance.AddScore(m_point);
                     Destroy(this.gameObject);
                 }
             }
