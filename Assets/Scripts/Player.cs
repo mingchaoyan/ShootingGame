@@ -58,8 +58,11 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) 
     {
-        if (other.tag.CompareTo("Enemy") == 0)
+        if (other.tag.CompareTo("Enemy") == 0 
+            || other.tag.CompareTo("SuperEnemy") == 0 
+            || other.tag.CompareTo("EnemyRocket") == 0)
         {
+            Debug.Log("OnTriggerEnter");
             m_life -= 1;
 
             if (m_life <= 0)
@@ -67,6 +70,6 @@ public class Player : MonoBehaviour {
 				Instantiate(m_explosionFx, m_transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
             }
-        }
+        } 
     }
 }
