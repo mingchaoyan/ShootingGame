@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 [AddComponentMenu("MyGame/Enemy")]
 public class Enemy : MonoBehaviour {
     public int m_point = 10;
