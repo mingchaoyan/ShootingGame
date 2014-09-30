@@ -648,6 +648,7 @@ MonoBehaviour:
   m_rocket: {fileID: 400000, guid: fab8ae8aa20dec04e8e0e4b6c081ad8c, type: 2}
   m_life: 3
   m_shootClip: {fileID: 8300000, guid: 44ee0a0b2a99156438f0b733f8c877a3, type: 3}
+  m_explosionClip: {fileID: 8300000, guid: 3b927b6b955638c4aba31a0698e84670, type: 3}
   m_explosionFx: {fileID: 400000, guid: fd0604056527c68458f893a5f9dc89e6, type: 2}
 --- !u!54 &1241054685
 Rigidbody:

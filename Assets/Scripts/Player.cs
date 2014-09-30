@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float m_life = 3;
 
     public AudioClip m_shootClip;
+    public AudioClip m_explosionClip;
     protected AudioSource m_audio;
     public Transform m_explosionFx;
 
@@ -71,6 +72,7 @@ public class Player : MonoBehaviour
             if (m_life <= 0)
             {
                 Instantiate(m_explosionFx, m_transform.position, Quaternion.identity);
+                m_audio.PlayOneShot(m_explosionClip);
                 Destroy(this.gameObject);
             }
         }
