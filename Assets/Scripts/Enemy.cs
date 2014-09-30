@@ -3,10 +3,12 @@ using System.Collections;
 
 
 [AddComponentMenu("MyGame/Enemy")]
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
     public int m_point = 10;
     public float m_speed = 1;
     public float m_life = 10;
+    public Transform m_exposionFX;
 
     protected float m_rotateSpeed = 30;
 
@@ -14,15 +16,17 @@ public class Enemy : MonoBehaviour {
 
     protected Transform m_transform;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         m_transform = this.transform;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         UpdateMove();
-	}
+    }
 
     protected virtual void UpdateMove()
     {
@@ -49,6 +53,7 @@ public class Enemy : MonoBehaviour {
                 if (m_life <= 0)
                 {
                     GameManager.Instance.AddScore(m_point);
+                    Instantiate(m_exposionFX, m_transform.position, Quaternion.identity);
                     Destroy(this.gameObject);
                 }
             }
