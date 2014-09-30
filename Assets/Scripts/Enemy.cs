@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public int m_point = 10;
     public float m_speed = 1;
     public float m_life = 10;
+    public AudioClip m_explosionClip;
+    protected AudioSource m_audio;
     public Transform m_exposionFX;
 
     protected float m_rotateSpeed = 30;
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         m_transform = this.transform;
+        m_audio = this.audio;
     }
 
     // Update is called once per frame
@@ -54,6 +57,7 @@ public class Enemy : MonoBehaviour
                 {
                     GameManager.Instance.AddScore(m_point);
                     Instantiate(m_exposionFX, m_transform.position, Quaternion.identity);
+                    m_audio.PlayOneShot(m_explosionClip);
                     Destroy(this.gameObject);
                 }
             }
