@@ -174,8 +174,8 @@ MonoBehaviour:
   m_point: 10
   m_speed: 1
   m_life: 10
+  m_explosionFX: {fileID: 400000, guid: fd0604056527c68458f893a5f9dc89e6, type: 2}
   m_explosionClip: {fileID: 8300000, guid: 3b927b6b955638c4aba31a0698e84670, type: 3}
-  m_exposionFX: {fileID: 400000, guid: fd0604056527c68458f893a5f9dc89e6, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -66,7 +66,6 @@ public class Player : MonoBehaviour
             || other.tag.CompareTo("SuperEnemy") == 0
             || other.tag.CompareTo("EnemyRocket") == 0)
         {
-            Debug.Log("OnTriggerEnter");
             m_life -= 1;
 
             if (m_life <= 0)
