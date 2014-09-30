@@ -1,2 +1,7 @@
-Library
-Temp
+Library/
+Temp/
+obj/
+*.csproj
+*.sln
+*.suo
+*.unityproj
