@@ -1,10 +1,5 @@
-ShootingGame
-============
-
-游戏名称
----------
-
 太空射击
+============
 
 玩法说明
 ---------
@@ -18,7 +13,7 @@ ShootingGame
 游戏展示
 --------
 - 开始界面：
-![image](https://github.com/mingchaoyan/ShootingGame/blob/master/GameShots/start.png)
+![image](https://github.com/mingchaoyan/ShootingGame/blob/master/GameShots/begin.png)
 - 游戏界面：
 ![image](https://github.com/mingchaoyan/ShootingGame/blob/master/GameShots/playing.png)
 - 结束界面：
