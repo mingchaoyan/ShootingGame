@@ -5,4 +5,5 @@ obj/
 *.sln
 *.suo
 *.unityproj
+*.userprefs
 .DS_Store
