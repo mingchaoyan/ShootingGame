@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance;
 	public int m_score = 0;
-	public static int m_hiscore = 0;
 	protected Player m_player;
 	public AudioClip m_musicClip;
 	protected AudioSource m_Audio;
@@ -78,10 +77,6 @@ public class GameManager : MonoBehaviour
 		GUI.Label (new Rect (5, 5, 100, 100), "装甲 " + life);
 
 		GUI.skin.label.fontSize = 40;
-		GUI.skin.label.alignment = TextAnchor.LowerCenter;
-		GUI.Label (new Rect (540f / 2f - 50, 5, 100, 100), "纪录 " + m_hiscore);
-
-		GUI.skin.label.fontSize = 40;
 		GUI.Label (new Rect (540f / 2f - 50, 5, 100, 100), "得分 " + m_score);
 
 		GUI.matrix = Matrix4x4.identity;
@@ -90,8 +85,5 @@ public class GameManager : MonoBehaviour
 	public void AddScore (int point)
 	{
 		m_score += point;
-
-		if (m_hiscore < m_score)
-			m_hiscore = m_score;
 	}
 }
