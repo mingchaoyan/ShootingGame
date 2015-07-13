@@ -22,7 +22,9 @@ public class EnemySpawn : MonoBehaviour
 			m_timer = Random.value * 15.0f;
 			if (m_timer < 5)
 				m_timer = 5;
-			Instantiate (m_enemy, m_transform.position, Quaternion.identity);
+			float x = Random.Range (-4, 4);
+			Vector3 pos = new Vector3 (x, m_transform.position.y, m_transform.position.z);
+			Instantiate (m_enemy, pos, Quaternion.identity);
 		}
 	
 	}
