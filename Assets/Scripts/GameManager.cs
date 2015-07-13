@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("MyGame/GameManager")]
 public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance;

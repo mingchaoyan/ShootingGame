@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("MyGame/Player")]
 public class Player : MonoBehaviour
 {
 	public float m_speed = 1;
